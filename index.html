@@ -27,8 +27,8 @@
     <header>
         <div class="banner-container">
             <div class="banner-contant">
-                <h3 class="banner-title">---SALE FEVER---</h3>
-                <h2 class="banner-des">Purchase TK 200 or above & <span>get 20% off</span></h2>
+                <h3 class="banner-title font-light">---SALE FEVER---</h3>
+                <h2 class="banner-des py-7 font-black">Purchase TK 200 or above & <span>get 20% off</span></h2>
                 <h4 class="promo-code">Use Promo Code <span>SELL200</span></h4>
             </div>
             <div class="banner-img">
@@ -40,10 +40,10 @@
     <main>
         <!-- card and  cart -->
         <section>
-            <div class="card-and-cart pt-16">
+            <div class="card-and-cart">
                 <div class="cards-container">
                     <div class="kitchenware-cards">
-                        <h4 class="text-3xl">Kitchenware</h4>
+                        <h4 class="text-3xl font-bold">Kitchenware</h4>
                         <div class="py-12 flex gap-x-3">
                             <div class="card w-96 bg-base-100 shadow-xl">
                                 <figure class="p-10 m-4 mb-4">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <div class="Sportswear-cards">
-                        <h4 class="text-3xl">Sportswear</h4>
+                        <h4 class="text-3xl font-bold pb-10">Sportswear</h4>
                         <div class="cards-container flex gap-x-3">
                             <div class="card w-96 bg-base-100 shadow-xl">
                                 <figure class="p-10 m-4 mb-4">
@@ -161,22 +161,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="">
+                <div class="font-medium">
                     <div class="coupon-apply-sec p-4 rounded">
                         <h3>Have coupon?</h3>
-                        <input class="coupon-field rounded-md" type="text" name="" id="" placeholder="Coupon code">
+                        <div class="flex my-2">
+                            <input class="coupon-field rounded-md" type="text" name="" id="" placeholder="Coupon code">
                         <button class="btn-apply-coupon p-2" disabled>Apply</button>
+                        </div>
                     </div>
-                    <div class="item-and-calc p-4 rounded">
+                    <div class="item-and-calc p-4 rounded mt-4">
                         <div class="cart-item">
 
                         </div>
                         <div class="price-calc-contaier">
-                            <hr>
+                            <hr class="my-4">
                             <p>Total price : <span>00.00</span><span>Tk</span></p>
                             <p>Discount : <span>00.00</span><span>Tk</span></p>
                             <p>Total : <span>00.00</span><span>Tk</span></p>
-                            <hr>
+                            <hr class="my-4">
+                            <button class="purchase-btn mt-4 py-2">Make Purchase</button>
                         </div>
                     </div>
                 </div>

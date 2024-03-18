@@ -7,7 +7,7 @@ body {
 /* banner/header style */
 .banner-container{
     background-color: #F9F6E2;
-    padding: 0 10%;
+    padding:5% 10%;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -22,6 +22,7 @@ body {
 .banner-title{
     font-size: 25px;
     text-shadow: 0px 1px 3px;
+    font-weight: 900;
 }
 
 .banner-des{
@@ -47,10 +48,14 @@ body {
 /* card-and-cart style */
 .card-and-cart{
     background-color: #F3F3F3;
-    padding:0 100px;
+    padding: 80px 130px;
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 75% 25%;
     gap: 25px;
+}
+.cards-container .card{
+    display: grid;
+    grid-template-rows: 60% 40%;
 }
 .card-and-cart .card figure{
     background-color: #F3F3F3;
@@ -77,6 +82,7 @@ body {
 .coupon-field{
     border: 2px solid #DBDBDB;
     padding: 5.4px;
+    width: 100%;
 }
 
 .item-and-calc{
@@ -88,4 +94,11 @@ body {
 }
 .price-calc-contaier hr{
     color: #888;
+}
+
+.purchase-btn{
+    background-color: #E527B2;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
 }
