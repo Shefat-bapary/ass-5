@@ -23,13 +23,13 @@
 </head>
 
 <body>
-    <!-- banner section  -->
     <header>
+        <!-- banner section  -->
         <div class="banner-container">
             <div class="banner-contant">
                 <h3 class="banner-title font-light">---SALE FEVER---</h3>
                 <h2 class="banner-des py-7 font-black">Purchase TK 200 or above & <span>get 20% off</span></h2>
-                <h4 class="promo-code">Use Promo Code <button>SELL200</button></h4>
+                <h4 class="promo-code">Use Promo Code <span>SELL200</span></h4>
             </div>
             <div class="banner-img">
                 <img src="images/Summer 1.png" alt="">
@@ -38,6 +38,16 @@
     </header>
 
     <main>
+        <!-- popup -->
+        <section>
+            <div id="overlay"></div>
+            <div id="order-complete-popup" class="order-complete-popup hide">
+                <img src="images/congo.png" alt="">
+                <h2>Congratulations</h2>
+                <p>Your Purchase the product</p>
+                <button id="go-back-home">Go Home</button>
+            </div>
+        </section>
         <!-- card and  cart -->
         <section>
             <div class="card-and-cart">
@@ -166,7 +176,7 @@
                         <h3>Have coupon?</h3>
                         <div class="flex my-2">
                             <input class="coupon-field rounded-md" type="text" name="" id="" placeholder="Coupon code">
-                        <button class="btn-apply-coupon p-2" disabled>Apply</button>
+                            <button class="btn-apply-coupon p-2" disabled>Apply</button>
                         </div>
                     </div>
                     <div class="item-and-calc p-4 rounded mt-4">
@@ -185,7 +195,6 @@
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>

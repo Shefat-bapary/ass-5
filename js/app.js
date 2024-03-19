@@ -34,3 +34,16 @@ for(const card of cards){
 
     })
 }
+
+
+// popup
+document.getElementById('purchase-btn').addEventListener('click', function(){
+    const removeOpacity = document.getElementById('overlay');
+    removeOpacity.classList.add('overlay');
+    const openPopup = document.getElementById('order-complete-popup');
+    openPopup.classList.remove('hide');
+})
+
+document.getElementById('go-back-home').addEventListener('click', function(){
+    location.reload();
+})
