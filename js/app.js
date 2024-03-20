@@ -5,6 +5,9 @@ const priceWithDiscountElement = document.getElementById('product-total-price');
 
 let subTotalPrice;
 
+let couponApplyOrNot = false;
+
+
 function displayProductOnCart(card) {
     listCount++;
     const productName = card.children[1].children[1].innerText;
@@ -34,12 +37,18 @@ function displayProductOnCart(card) {
     if (productTotalPrice >= 200) {
         applyCouponBtn.removeAttribute('disabled');
     }
+
+    // Apply the coupon until the purchase is completed
+    if (couponApplyOrNot === true) {
+        calculateDiscount();
+    }
+
 }
 
 function calculateDiscount() {
     const couponField = document.getElementById('coupon-field');
     const couponCode = couponField.value;
-    if (couponCode === 'SELL200') {
+    if (couponCode === 'SELL200' || couponApplyOrNot === true) {
         const newTotalDiscountAmount = subTotalPrice * 0.2;
         const previousDiscountElement = document.getElementById('discount');
         previousDiscountElement.innerText = newTotalDiscountAmount.toFixed(2);
@@ -47,11 +56,13 @@ function calculateDiscount() {
         priceWithDiscountElement.innerText = productDiscountPrice.toFixed(2);
 
         couponField.value = "";
+        couponApplyOrNot = true;
     }
     else {
         alert('INVALID COUPON')
     }
 }
+
 
 applyCouponBtn.addEventListener('click', calculateDiscount);
 
