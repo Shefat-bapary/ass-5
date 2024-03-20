@@ -19,18 +19,17 @@ function calculateAndDisplayProductPrices(card){
     const productTotalPrice = previousProductTotalPrice + newProductPrice;
     totalBalanceElement.innerText = productTotalPrice;
     
+    const purchaseBtn = document.getElementById('purchase-btn');
     if(productTotalPrice > 0){
-        const purchaseBtn = document.getElementById('purchase-btn');
         purchaseBtn.removeAttribute('disabled');
     }
+    const applyCouponBtn = document.getElementById('apply-coupon');
     if(productTotalPrice >= 200){
-        const purchaseBtn = document.getElementById('apply-coupon');
         purchaseBtn.removeAttribute('disabled');
         document.getElementById('apply-coupon').addEventListener('click', function(){
             const couponCode = document.getElementById('coupon-field').value;
             if(couponCode === 'SELL200'){
                 const newTotalDiscountAmount = productTotalPrice * 0.2.toFixed(2);
-                console.log(newProductPrice);
                 const previousDiscountElement = document.getElementById('discount');
                 const previousDiscount = parseFloat(previousDiscountElement.innerText);
                 previousDiscountElement.innerText = newTotalDiscountAmount;
@@ -38,6 +37,7 @@ function calculateAndDisplayProductPrices(card){
                 const priceWithDiscountElement = document.getElementById('price-with-discount');
                 priceWithDiscountElement.innerText = productDiscountPrice;
             }
+            console.log('btn clicked');
         })
     }
 }
