@@ -175,8 +175,8 @@
                     <div class="coupon-apply-sec p-4 rounded">
                         <h3>Have coupon?</h3>
                         <div class="flex my-2">
-                            <input class="coupon-field rounded-md" type="text" name="" id="" placeholder="Coupon code">
-                            <button class="btn-apply-coupon p-2" disabled>Apply</button>
+                            <input id="coupon-field" class="coupon-field rounded-md" type="text" name="" id="" placeholder="Coupon code">
+                            <button id="apply-coupon" class="btn-apply-coupon p-2" disabled>Apply</button>
                         </div>
                     </div>
                     <div class="item-and-calc p-4 rounded mt-4">
@@ -186,8 +186,8 @@
                         <div class="price-calc-contaier">
                             <hr class="my-4">
                             <p>Total price : <span id="product-total-price">00.00</span><span>Tk</span></p>
-                            <p>Discount : <span>00.00</span><span>Tk</span></p>
-                            <p>Total : <span>00.00</span><span>Tk</span></p>
+                            <p>Discount : <span id="discount">00.00</span><span>Tk</span></p>
+                            <p>Total : <span id="price-with-discount">00.00</span><span>Tk</span></p>
                             <hr class="my-4">
                             <button id="purchase-btn" class="purchase-btn mt-4 py-2" disabled>Make Purchase</button>
                         </div>

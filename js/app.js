@@ -12,18 +12,33 @@ function displayProductOnCart(card){
 function calculateAndDisplayProductPrices(card){
     const productPriceString = card.children[1].children[2].children[0].innerText;
     const newProductPrice = parseFloat(productPriceString);
-    const totalProductBalance = document.getElementById('product-total-price')
-    const previousProductTotalPriceString = totalProductBalance.innerText;
+    const totalBalanceElement = document.getElementById('product-total-price')
+    const previousProductTotalPriceString = totalBalanceElement.innerText;
 
     const previousProductTotalPrice = parseFloat(previousProductTotalPriceString);
     const productTotalPrice = previousProductTotalPrice + newProductPrice;
-    console.log(previousProductTotalPrice, newProductPrice);
-    console.log(productTotalPrice)
-    totalProductBalance.innerText = productTotalPrice;
+    totalBalanceElement.innerText = productTotalPrice;
     
     if(productTotalPrice > 0){
         const purchaseBtn = document.getElementById('purchase-btn');
         purchaseBtn.removeAttribute('disabled');
+    }
+    if(productTotalPrice >= 200){
+        const purchaseBtn = document.getElementById('apply-coupon');
+        purchaseBtn.removeAttribute('disabled');
+        document.getElementById('apply-coupon').addEventListener('click', function(){
+            const couponCode = document.getElementById('coupon-field').value;
+            if(couponCode === 'SELL200'){
+                const newTotalDiscountAmount = productTotalPrice * 0.2.toFixed(2);
+                console.log(newProductPrice);
+                const previousDiscountElement = document.getElementById('discount');
+                const previousDiscount = parseFloat(previousDiscountElement.innerText);
+                previousDiscountElement.innerText = newTotalDiscountAmount;
+                const productDiscountPrice = productTotalPrice - newTotalDiscountAmount;
+                const priceWithDiscountElement = document.getElementById('price-with-discount');
+                priceWithDiscountElement.innerText = productDiscountPrice;
+            }
+        })
     }
 }
 const cards = document.getElementsByClassName('card');
