@@ -133,6 +133,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .order-complete-popup img {
